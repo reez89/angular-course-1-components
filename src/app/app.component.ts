@@ -8,6 +8,12 @@ import {COURSES} from '../db-data';
 })
 export class AppComponent {
 
+  // AGGIUNGENDO QUESTI VARIABILI, RENDO DISPONIBILI ALL'INTERNO DELL'HTML , GLI ELEMENTI PRESENTI NEL FILE DB-DATA
 
+  coreCourse = COURSES[0];
+
+  rxjsCourse = COURSES[1];
+
+  nxjsCourse = COURSES[2];
 
 }

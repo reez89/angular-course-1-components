@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Course } from '../model/course';
 
 @Component({
   selector: 'course-card', // sarà il nome del tag html da inserire nel template originale.
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./course-card.component.css'] // foglio di stile nel nostro componente
 })
 export class CourseCardComponent implements OnInit {
+
+  @Input()
+  course:Course;
+  /* title:string;  */ // Dichiaro che title è un input nel mio file html
 
   constructor() { }
 
