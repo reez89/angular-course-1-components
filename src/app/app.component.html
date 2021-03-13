@@ -5,8 +5,19 @@
 
 </div>
 
-<!-- HTML APP PRINCIPALE DOVE AGGIUNGERE I COMPONENTI -->
+<div *ngFor=" let pair of course | keyvalue">
+    {{pair.key + ': ' + pair.value }}
+</div>
+<!-- {{ courses | json }} --> <!-- pipe per accendere al file json -->
 
+<!-- HTML APP PRINCIPALE DOVE AGGIUNGERE I COMPONENTI -->
+<div class="demo">
+    <div>Start Date: {{ startDate | date: 'MM/dd/yy' }}</div> <!-- Le pipe in questo caso, date, ci permette di formattare meglio la nostra data -->
+
+    <div>{{ title | titlecase }}</div>
+    <div>{{ price | currency : 'EUR' }}</div>
+
+</div>
 <div class="courses">
     <!-- Ciclo for in Angular utilizzanto *ngFor -->
     <course-card 
