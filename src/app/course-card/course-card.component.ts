@@ -15,6 +15,8 @@ export class CourseCardComponent implements OnInit {
   @Output('courseSelected') //serve per utilizzare custom event
   courseEmitter = new EventEmitter<Course>() ;
 
+  @Input()
+  cardIndex: number; 
   /* title:string;  */ // Dichiaro che title è un input nel mio file html
 
   constructor() { 

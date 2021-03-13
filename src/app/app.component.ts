@@ -10,11 +10,7 @@ export class AppComponent {
 
   // AGGIUNGENDO QUESTI VARIABILI, RENDO DISPONIBILI ALL'INTERNO DELL'HTML , GLI ELEMENTI PRESENTI NEL FILE DB-DATA
 
-  coreCourse = COURSES[0];
-
-  rxjsCourse = COURSES[1];
-
-  nxjsCourse = COURSES[2];
+  courses = COURSES; // dichiaro il mio array di oggetti dal quale pescare i miei dati.
 
   onCourseSelected(course:Course){
 
