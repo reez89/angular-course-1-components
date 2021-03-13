@@ -35,4 +35,11 @@ export class CourseCardComponent implements OnInit {
     return this.course && this.course.iconUrl;
   }
 
+  cardClasses(){ //aggiungerà la classe beginner se course.category avrà come parametro BEGINNER
+    if (this.course.category == 'BEGINNER'){
+      return ['beginner'] ;
+    }
+    
+  }
+
 }
