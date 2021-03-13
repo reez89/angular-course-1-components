@@ -29,7 +29,10 @@ export class CourseCardComponent implements OnInit {
 
     console.log('Hello There');
     this.courseEmitter.emit(this.course);
+  }
 
+  isVisible(){
+    return this.course && this.course.iconUrl;
   }
 
 }
