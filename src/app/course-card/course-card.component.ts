@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 import { Course } from '../model/course';
 
 @Component({
@@ -9,12 +10,24 @@ import { Course } from '../model/course';
 export class CourseCardComponent implements OnInit {
 
   @Input()
-  course:Course;
+  course: Course;
+  
+  @Output()
+  courseSelected = new EventEmitter<Course>() ;
+
   /* title:string;  */ // Dichiaro che title è un input nel mio file html
 
-  constructor() { }
+  constructor() { 
+  }
 
-  ngOnInit(): void {
+  ngOnInit() {
+  }
+
+  onCourseViewd(){
+
+    console.log('Hello There');
+    this.courseSelected.emit(this.course);
+
   }
 
 }

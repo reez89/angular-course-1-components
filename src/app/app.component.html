@@ -9,9 +9,18 @@
 
 <div class="courses">
     
-    <course-card [course]="coreCourse" ></course-card>
-    <course-card [course]="rxjsCourse"></course-card>
-    <course-card [course]="nxjsCourse"></course-card>
+    <course-card 
+        (courseSelected)="onCourseSelected($event)" 
+        [course]="coreCourse" >
+    </course-card>
+    <course-card 
+        (courseSelected)="onCourseSelected($event)" 
+        [course]="rxjsCourse">
+    </course-card>
+    <course-card 
+        (courseSelected)="onCourseSelected($event)" 
+        [course]="nxjsCourse">
+    </course-card>
 
 
 </div>
