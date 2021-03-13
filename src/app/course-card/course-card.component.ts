@@ -9,11 +9,11 @@ import { Course } from '../model/course';
 })
 export class CourseCardComponent implements OnInit {
 
-  @Input()
+  @Input() //serve per dichiarare da dove prendere i file
   course: Course;
   
-  @Output()
-  courseSelected = new EventEmitter<Course>() ;
+  @Output('courseSelected') //serve per utilizzare custom event
+  courseEmitter = new EventEmitter<Course>() ;
 
   /* title:string;  */ // Dichiaro che title è un input nel mio file html
 
@@ -26,7 +26,7 @@ export class CourseCardComponent implements OnInit {
   onCourseViewd(){
 
     console.log('Hello There');
-    this.courseSelected.emit(this.course);
+    this.courseEmitter.emit(this.course);
 
   }
 
