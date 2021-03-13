@@ -17,7 +17,13 @@
     <div class="course-description">
         {{ course.longDescription }}
     </div>
+    <div class="course-category" [ngSwitch]="course.category"> <!-- molto simile allo switch di javascript -->
+        <div class="category" *ngSwitchCase="'BEGINNER'">Beginner</div>
+        <div class="category" *ngSwitchCase="'INTERMEDIATE'">Intermediate</div>
+        <div class="category" *ngSwitchCase="'ADVANCED'">Advanced</div>
+        <div class="category" *ngSwitchDefault="'Default'">All levels</div>
 
+    </div>
     <button
     (click)="onCourseViewd()"
     >View Course</button>
